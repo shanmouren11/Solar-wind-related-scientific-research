@@ -1,0 +1,45 @@
+# ---------- 数据（红线：一律不进 Git） ----------
+data/raw/**
+data/interim/**
+data/cubes/**
+!**/.gitkeep
+
+# 常见科学数据格式
+*.fits
+*.fit
+*.fts
+*.h5
+*.hdf5
+*.nc
+*.npy
+*.npz
+*.pkl
+*.pth
+*.zarr/
+*.zip
+*.tar
+*.gz
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---------- 编辑器 / 系统 ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# ---------- 出图（大图不进，需要时手动 git add -f） ----------
+figures/**
+!figures/.gitkeep

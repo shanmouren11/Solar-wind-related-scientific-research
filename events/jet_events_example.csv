@@ -1,0 +1,3 @@
+event_id,source_region,region_type,instrument,wavelength_A,date_obs_start,date_obs_end,x_arcsec,y_arcsec,cr_lon_deg,cr_lat_deg,width_km,length_km,lifetime_s,v_km_s,accel_km_s2,peak_intensity,morphology_class,energy_erg,confidence,measured_by,reviewed_by,note
+R1-0001,R1_CH,CH,EUI_HRIEUV,174,2021-01-12T13:04:20Z,2021-01-12T13:06:10Z,512.0,-210.5,,,320.0,2100.0,110.0,95.0,4.2,1.8,single,1.2e24,0.85,杜芊萱,韩裕祥,示例行：换成一个真事件后再删本文件
+R3-0001,R3_QS,QS,SDO_AIA,193,2021-01-19T02:11:00Z,2021-01-19T02:14:30Z,-330.0,180.0,145.2,22.6,540.0,3400.0,210.0,60.0,1.1,1.4,multi,8.0e23,0.6,张晋辅,,示例行

@@ -1,0 +1,6 @@
+# 机器学习部分单独安装，别塞进主环境（会和 sunpy 的依赖打架）
+# conda activate solar-jet && pip install -r requirements-ml.txt
+torch>=2.1
+torchvision
+segmentation-models-pytorch
+albumentations

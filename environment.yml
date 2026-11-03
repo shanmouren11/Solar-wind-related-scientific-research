@@ -1,0 +1,26 @@
+name: solar-jet
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  # 数值与天文基础
+  - numpy
+  - scipy
+  - pandas
+  - astropy
+  - matplotlib
+  # 太阳物理：数据检索 / 校准 / 磁场外推
+  - sunpy
+  - sunpy-soar        # Solar Orbiter / EUI 数据检索
+  - aiapy             # SDO/AIA 校准
+  - pfsspy            # PFSS 外推（旧名，新版叫 sunkit-magex）
+  - sunkit-magex      # PFSS（若该源不可用，删掉本行，pfsspy 仍可用）
+  # 图像处理与统计
+  - scikit-image
+  - scikit-learn
+  # 交互
+  - jupyterlab
+  - ipykernel
+  - pip
+  - pip:
+      - eispac        # Hinode/EIS 光谱处理

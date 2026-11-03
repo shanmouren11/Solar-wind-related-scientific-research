@@ -1,0 +1,1 @@
+event_id,source_region,region_type,instrument,wavelength_A,date_obs_start,date_obs_end,x_arcsec,y_arcsec,cr_lon_deg,cr_lat_deg,width_km,length_km,lifetime_s,v_km_s,accel_km_s2,peak_intensity,morphology_class,energy_erg,confidence,measured_by,reviewed_by,note

@@ -1,0 +1,4 @@
+region_id,region_type,carrington_lon_min_deg,carrington_lon_max_deg,lat_min_deg,lat_max_deg,obs_window_start,obs_window_end,instrument,cadence,data_status,owner,note
+R1,CH,50,100,10,45,2021-01-10,2021-01-23,待定,待定,待确认 EUI 覆盖,张晋辅,冕洞；对应 FSW；坐标取自 Sun et al. 2026 图 5
+R2,AR,60,135,-50,10,2021-01-10,2021-01-23,待定,待定,待确认 EUI 覆盖,张晋辅,NOAA AR 12796 西侧；对应 ASSW
+R3,QS,120,170,10,50,2021-01-10,2021-01-23,待定,待定,待确认 EUI 覆盖,张晋辅,宁静区；对应 MVAS

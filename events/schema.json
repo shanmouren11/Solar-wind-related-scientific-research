@@ -1,0 +1,198 @@
+{
+  "version": "0.1",
+  "updated": "2026-11-03",
+  "owner": "韩裕祥",
+  "note": "改字段必须同步更新 events/README.md、code/config.py 与 scripts/validate_events.py",
+  "region_to_type": {
+    "R1_CH": "CH",
+    "R2_AR": "AR",
+    "R3_QS": "QS",
+    "UNK": "UNK"
+  },
+  "columns": [
+    {
+      "name": "event_id",
+      "type": "str",
+      "required": true,
+      "desc": "事件编号：源区前缀 + 4 位序号，如 R1-0001",
+      "pattern": "^(R1|R2|R3|UNK)-[0-9]{4}$"
+    },
+    {
+      "name": "source_region",
+      "type": "enum",
+      "required": true,
+      "desc": "源区编号",
+      "enum": [
+        "R1_CH",
+        "R2_AR",
+        "R3_QS",
+        "UNK"
+      ]
+    },
+    {
+      "name": "region_type",
+      "type": "enum",
+      "required": true,
+      "desc": "源区类型",
+      "enum": [
+        "CH",
+        "AR",
+        "QS",
+        "BOUNDARY",
+        "UNK"
+      ]
+    },
+    {
+      "name": "instrument",
+      "type": "enum",
+      "required": true,
+      "desc": "观测仪器",
+      "enum": [
+        "EUI_HRIEUV",
+        "SDO_AIA",
+        "HINODE_EIS",
+        "IRIS",
+        "OTHER"
+      ]
+    },
+    {
+      "name": "wavelength_A",
+      "type": "float",
+      "required": true,
+      "desc": "观测波长（埃）",
+      "min": 0,
+      "max": null
+    },
+    {
+      "name": "date_obs_start",
+      "type": "iso8601",
+      "required": true,
+      "desc": "事件开始时间（UTC）"
+    },
+    {
+      "name": "date_obs_end",
+      "type": "iso8601",
+      "required": true,
+      "desc": "事件结束时间（UTC）"
+    },
+    {
+      "name": "x_arcsec",
+      "type": "float",
+      "required": false,
+      "desc": "日面投影 x 坐标（角秒）"
+    },
+    {
+      "name": "y_arcsec",
+      "type": "float",
+      "required": false,
+      "desc": "日面投影 y 坐标（角秒）"
+    },
+    {
+      "name": "cr_lon_deg",
+      "type": "float",
+      "required": false,
+      "desc": "Carrington 经度（回映后填）",
+      "min": 0,
+      "max": 360
+    },
+    {
+      "name": "cr_lat_deg",
+      "type": "float",
+      "required": false,
+      "desc": "Carrington 纬度（回映后填）",
+      "min": -90,
+      "max": 90
+    },
+    {
+      "name": "width_km",
+      "type": "float",
+      "required": false,
+      "desc": "喷流宽度（km，半高全宽）",
+      "min": 0,
+      "max": null
+    },
+    {
+      "name": "length_km",
+      "type": "float",
+      "required": false,
+      "desc": "喷流长度（km）",
+      "min": 0,
+      "max": null
+    },
+    {
+      "name": "lifetime_s",
+      "type": "float",
+      "required": false,
+      "desc": "寿命（s）",
+      "min": 0,
+      "max": null
+    },
+    {
+      "name": "v_km_s",
+      "type": "float",
+      "required": false,
+      "desc": "速度（km/s，时间-距离图斜率）"
+    },
+    {
+      "name": "accel_km_s2",
+      "type": "float",
+      "required": false,
+      "desc": "加速度（km/s^2）"
+    },
+    {
+      "name": "peak_intensity",
+      "type": "float",
+      "required": false,
+      "desc": "峰值相对强度",
+      "min": 0,
+      "max": null
+    },
+    {
+      "name": "morphology_class",
+      "type": "enum",
+      "required": true,
+      "desc": "形态分类",
+      "enum": [
+        "single",
+        "multi",
+        "loop",
+        "point",
+        "unknown"
+      ]
+    },
+    {
+      "name": "energy_erg",
+      "type": "float",
+      "required": false,
+      "desc": "估计能量（erg）",
+      "min": 0,
+      "max": null
+    },
+    {
+      "name": "confidence",
+      "type": "float",
+      "required": false,
+      "desc": "置信度 0-1",
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "measured_by",
+      "type": "str",
+      "required": true,
+      "desc": "量测人"
+    },
+    {
+      "name": "reviewed_by",
+      "type": "str",
+      "required": false,
+      "desc": "复核人"
+    },
+    {
+      "name": "note",
+      "type": "str",
+      "required": false,
+      "desc": "备注"
+    }
+  ]
+}

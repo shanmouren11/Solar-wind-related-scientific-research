@@ -1,26 +1,28 @@
 name: solar-jet
-channels:
-  - conda-forge
+# NOTE: keep this file ASCII-only. On Chinese Windows conda decodes YAML with
+# GBK and crashes on non-ASCII characters (EnvironmentSpec hook error).
+# Channel selection is left to the user's .condarc (e.g. TUNA/USTC mirrors);
+# add an explicit "channels:" block here only if you really need it.
 dependencies:
   - python=3.11
-  # 数值与天文基础
+  # numerics / core astro
   - numpy
   - scipy
   - pandas
   - astropy
   - matplotlib
-  # 太阳物理：数据检索 / 校准 / 磁场外推
+  # solar physics: search / calibration / field extrapolation
   - sunpy
-  - sunpy-soar        # Solar Orbiter / EUI 数据检索
-  - aiapy             # SDO/AIA 校准
-  - pfsspy            # PFSS 外推（旧名，新版叫 sunkit-magex）
-  - sunkit-magex      # PFSS（若该源不可用，删掉本行，pfsspy 仍可用）
-  # 图像处理与统计
+  - sunpy-soar
+  - aiapy
+  - pfsspy
+  - sunkit-magex
+  # imaging & stats
   - scikit-image
   - scikit-learn
-  # 交互
+  # interactive
   - jupyterlab
   - ipykernel
   - pip
   - pip:
-      - eispac        # Hinode/EIS 光谱处理
+      - eispac

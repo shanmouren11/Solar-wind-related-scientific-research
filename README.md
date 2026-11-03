@@ -31,6 +31,12 @@ python scripts/validate_events.py
 python code/download.py --help
 ```
 
+### 三个必须知道的坑
+
+1. **一定先 `conda activate solar-jet` 再跑程序。** 直接调用 `envs\solar-jet\python.exe` 会崩（`0xc06d007f`，DLL 找不到），因为环境里的依赖 DLL 在 `Library\bin`，只有 activate 之后才会进 PATH。
+2. **`environment.yml` 必须保持纯 ASCII。** 中文 Windows 上 conda 用 GBK 读 YAML，一有中文注释就报 `'gbk' codec can't decode` 然后失败。频道（镜像）配置放在 `~/.condarc` 里，不写在 yml 里。
+3. **首次 import sunpy 会建 `%LOCALAPPDATA%\sunpy` 和 matplotlib 字体缓存**，第一次跑会慢十几秒，属正常。
+
 ## 目录结构
 
 | 路径 | 放什么 | 进 Git 吗 |
